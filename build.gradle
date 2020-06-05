@@ -31,7 +31,6 @@ test{
     jacoco{
         append = false
         destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
-        classDumbDir = file("$buildDir/jacoco/classpathdumps")
     }
 }
 
