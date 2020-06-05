@@ -9,7 +9,7 @@ install: true
 
 addons:
   sonarcloud:
-    organization: D0543027-github
+    organization: d0543027
     token:
       secure: 2415f8b23f3fc51d8621ace562e248e18b2b66ed
 
