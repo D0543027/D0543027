@@ -17,4 +17,4 @@ script:
     - gradle clean
     - gradle check
     - gradle build
-    - gradle sonarqube
+    - gradle sonarqube -Dsonar.login=$SONAR_TOKEN_2
