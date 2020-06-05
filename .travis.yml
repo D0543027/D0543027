@@ -16,5 +16,6 @@ addons:
 script:
     - gradle clean
     - gradle check
-    - gradle build
+    - gradle jacocoTestReport
     - gradle sonarqube -Dsonar.login=$SONAR_TOKEN_2
+    - gradle build
