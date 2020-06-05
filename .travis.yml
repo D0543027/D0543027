@@ -5,15 +5,16 @@ dist: xenial
 jdk:
     - openjdk11
 
-install:
-    - gradle assemble
+install: true
 
 addons:
   sonarcloud:
-    organization: "d0543027"
+    organization: "d0543027-github"
     token:
-      secure: "HdXThKFUXjyhIYaricmW28mH8ke2KvPPH1lXeimQ+Nm4Igv/oQKGp8szPhTxH+8UfgKNSFdAz+tW4h/9Sm/MhVA+yb87hkiEoZ7vjrZUA2bv0E6T8alDa1wBhhu5nSUXOyH7TnQFOkm3nD0C++AWhPx9GbRvITn4koek+IiWqgXlcyEqN2EE4QcdVWZH7IO+VYj46WwiWGfYex0ZMQ9V8zNEctINpkCCSVIBOBEyDnDbAg0Cu+AMH+CPucOCQEtB94KrqLTyIHsh3XxpRJJQM/OrskUdLg8OgGA1I4t9/MblaVGSp3JthMG3xxQu3U+OFpaem0JpCzU023pw17b8/iJ25vVmYdoOz7J1CSx83qQs3wzh3K9PCf4KY3kgxNlvxv+2w0qLEYlJIn6EeJrlsQbFsELwMiLoV2uY2lCy+ovMQ6TSEY+pgb1cB0B+1rpLP2OCIeulAH7rjueoWVLqJ1Sqapp7SKaZJlm27JNNQ9UrJ94BiZYORqBfYbZiRQG4BE9D7+o2RV5XQusBoFC+Mlm2r3nSt1LwV+U/14JDa3fgx0CTXPb1Yab0wDnds+xh9n2fNNOeYvYJxEWIG0/2+dOaAkORAIXiOphm04Dw6VlPlRh33dWpCW4WZm/hkhov5ePIWHhhIFU+a3QgdOyhPZA6BX5mu4JETcW7ZDhGKtw=" # encrypted value of your token
+      secure: "6a6c287a2c178cee8a86b7d486550ad9a8144891" # encrypted value of your token
 
 script:
-    - gradle test
+    - gradle clean
+    - gradle check
     - gradle sonarqube
+    - gradle build
